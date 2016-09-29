@@ -1,0 +1,15 @@
+= Sequence Generator
+Göran Ehrsson <goran@technipelago.se>
+:description: Sequence Generator developer guide.
+:keywords: groovy, grails, plugin, documentation, sequence, sequences
+:toc: left
+:numbered:
+:icons: font
+:imagesdir: ./images
+:source-highlighter: prettify
+:homepage: https://github.com/technipelago/sequence-generator
+
+This Grails 3.x plugin is called `sequence-generator` and provides unique
+number sequences to applications. The plugin can be embedded in a Grails 3.x
+application that need unique number sequences like customer numbers,
+project numbers, etc.
