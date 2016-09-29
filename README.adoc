@@ -4,6 +4,12 @@ The sequence generator plugin provides a simple way to add sequence counters
 to Grails 3 applications. You can control the starting number, the format and
 you can have different sequence counters based on application logic.
 
+NOTE: This is the Grails 3 version of
+      https://github.com/goeh/grails-sequence-generator[Grails 2 sequence-generator plugin].
+      It's a complete re-write but mostly backwards compatible with the older Grails 2 version,
+      so you should be able to use it in Grails application that you upgraded from Grails 2 to Grails 3
+      with just minor adjustments to your application code.
+
 == Examples
 
 [source,groovy]
