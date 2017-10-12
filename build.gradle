@@ -9,7 +9,7 @@ buildscript {
     }
 }
 
-version "0.1"
+version "1.0-SNAPSHOT"
 group "grails.plugins.sequence"
 
 apply plugin:"eclipse"
@@ -22,12 +22,6 @@ repositories {
     maven { url "https://repo.grails.org/grails/core" }
 }
 
-dependencyManagement {
-    imports {
-        mavenBom "org.grails:grails-bom:$grailsVersion"
-    }
-    applyMavenExclusions false
-}
 
 dependencies {
     compile "org.gr8crm.sequence:sequence-generator-starter:0.0.1-SNAPSHOT"
@@ -44,7 +38,7 @@ dependencies {
     compile "org.hibernate:hibernate-core:5.1.1.Final"
     compile "org.hibernate:hibernate-ehcache:5.1.1.Final"
     console "org.grails:grails-console"
-    profile "org.grails.profiles:web"
+    profile "org.grails.profiles:web-plugin"
     provided "org.codehaus.groovy:groovy-ant"
     runtime "com.h2database:h2"
     testCompile "org.grails:grails-plugin-testing"
