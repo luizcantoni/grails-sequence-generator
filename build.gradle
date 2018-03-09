@@ -9,7 +9,7 @@ buildscript {
     }
 }
 
-version "0.1"
+version "1.0-SNAPSHOT"
 group "grails.plugins.sequence"
 
 apply plugin:"eclipse"
@@ -44,7 +44,7 @@ dependencies {
     compile "org.hibernate:hibernate-core:5.1.1.Final"
     compile "org.hibernate:hibernate-ehcache:5.1.1.Final"
     console "org.grails:grails-console"
-    profile "org.grails.profiles:web"
+    profile "org.grails.profiles:web-plugin"
     provided "org.codehaus.groovy:groovy-ant"
     runtime "com.h2database:h2"
     testCompile "org.grails:grails-plugin-testing"
@@ -57,16 +57,15 @@ task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
 }
 grailsPublish {
-    // TODO: Provide values here
     user = 'user'
     key = 'key'
-    githubSlug = 'foo/bar'
+    githubSlug = 'gr8crm/grails-sequence-generator'
     license {
         name = 'Apache-2.0'
     }
-    title = "My Plugin"
-    desc = "Full plugin description"
-    developers = [johndoe:"John Doe"]
+    title = "Sequence Generator"
+    desc = "Sequence Generator"
+    developers = [goeh:"Goran Ehrsson"]
     portalUser = ""
     portalPassword = ""
 }
