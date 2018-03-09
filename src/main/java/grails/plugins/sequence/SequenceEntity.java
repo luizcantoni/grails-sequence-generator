@@ -14,16 +14,21 @@
  * limitations under the License.
  */
 
-package grails.plugins.sequence
+package grails.plugins.sequence;
 
-/**
- * Only used by integration test.
- */
-@SequenceEntity
-class SequenceTestEntity {
-    String name
+import org.codehaus.groovy.transform.GroovyASTTransformationClass;
 
-    String toString() {
-        "#$number $name"
-    }
+import java.lang.annotation.ElementType;
+import java.lang.annotation.Retention;
+import java.lang.annotation.RetentionPolicy;
+import java.lang.annotation.Target;
+
+@Target({ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@GroovyASTTransformationClass("grails.plugins.sequence.SequenceASTTransformation")
+public @interface SequenceEntity {
+    String property() default "number";
+    int maxSize() default 10;
+    boolean blank() default false;
+    String unique() default "true";
 }

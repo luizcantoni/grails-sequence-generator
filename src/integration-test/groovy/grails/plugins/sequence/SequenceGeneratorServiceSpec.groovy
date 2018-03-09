@@ -190,6 +190,17 @@ class SequenceGeneratorServiceSpec extends Specification {
         sequenceGeneratorService.nextNumberLong('test', 'flush', 8) == 5
     }
 
+    void "test SequenceEntity annotation"() {
+        given:
+        def entity = new SequenceTestEntity()
+
+        when:
+        entity.validate()
+
+        then:
+        entity.number == '1'
+    }
+
     void "test performance"() {
         given:
         sequenceGeneratorService.initialize('test', 'perf', 888)
