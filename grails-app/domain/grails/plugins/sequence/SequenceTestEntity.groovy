@@ -19,7 +19,7 @@ package grails.plugins.sequence
 /**
  * Only used by integration test.
  */
-@SequenceEntity
+//@SequenceEntity
 class SequenceTestEntity {
     String name
 
